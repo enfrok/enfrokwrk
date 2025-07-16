@@ -1,3 +1,4 @@
+// Scroll fade-in
 const faders = document.querySelectorAll('.fade-in');
 
 const appearOptions = {
@@ -15,4 +16,14 @@ const appearOnScroll = new IntersectionObserver((entries, observer) => {
 
 faders.forEach(fader => {
   appearOnScroll.observe(fader);
+});
+
+// Form submit logic
+document.getElementById('enfronismentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const status = document.getElementById('formStatus');
+  status.textContent = "Submitting...";
+  setTimeout(() => {
+    status.textContent = "Submitted. Your issue has been logged.";
+  }, 1000);
 });
