@@ -1,56 +1,62 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* ...keep all your previous CSS... */
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 30px auto;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  background-color: #000;
+input, textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #222;
   color: #fff;
-  line-height: 1.6;
 }
 
-section {
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+.status-msg {
+  font-size: 0.9rem;
+  color: #0f0;
+}
+
+/* T&C section */
+.terms {
   padding: 80px 20px;
   max-width: 900px;
   margin: auto;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-.info h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.info p, .info ul {
-  font-size: 1rem;
-  color: #ddd;
   text-align: left;
-  margin-top: 10px;
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.8;
 }
 
-.info ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
+/* Spacer + fade-in still same */
+.spacer {
+  height: 100vh;
 }
 
-.info ul li {
-  padding: 4px 0;
-}
-
-/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
